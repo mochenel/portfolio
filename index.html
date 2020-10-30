@@ -5,7 +5,7 @@
     <title>Mochene Freddy &mdash; Personal/CV Website</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+<script src= "https://smtpjs.com/v3/smtp.js"> </script> 
     
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
@@ -82,6 +82,7 @@
                <p class="mb-3">
               In addition to this, I have the ability to adapt to any type of team environment, I am team oriented and get along with others when working in a group setting. I also have the ability to work independently while staying on schedule and meeting those tight deadlines.
             </p>
+           
             <p>
               <a href="#section-contact" class="btn btn-primary px-4 py-2 btn-sm smoothscroll">Hire Me</a>
               <a href="resume/freddy.pdf" target="_blank" class="btn btn-secondary px-4 py-2 btn-sm">Download CV</a>
@@ -177,22 +178,25 @@
           </div>
           
           <div class="col-md-7 mb-5 mb-md-0">
-            <form action="" class="site-form">
+            <form class="site-form" >
               <h3 class="mb-5">Get In Touch</h3>
               <div class="form-group">
-                <input type="text" class="form-control px-3 py-4" placeholder="Your Name">
+                <input type="text" class="form-control px-3 py-4" id="name" name="name" placeholder="Your Name">
               </div>
               <div class="form-group">
-                <input type="email" class="form-control px-3 py-4" placeholder="Your Email">
+                <input type="email" class="form-control px-3 py-4" id="email" name="email" placeholder="Your Email">
               </div>
               <div class="form-group">
-                <input type="email" class="form-control px-3 py-4" placeholder="Your Phone">
+                <input type="tel" class="form-control px-3 py-4" id="tel" name="tel" placeholder="Your Phone"  title="incorrect tel format">
               </div>
               <div class="form-group mb-5">
-                <textarea class="form-control px-3 py-4"cols="30" rows="10" placeholder="Write a Message"></textarea>
+                <textarea class="form-control px-3 py-4"cols="30" rows="10" id="message" name="message" placeholder="Write a Message"></textarea>
               </div>
               <div class="form-group">
-                <input type="submit" class="btn btn-primary  px-4 py-3" value="Send Message">
+                <button type="button" id="send" class="btn btn-primary  px-4 py-3" >Send Message</button>
+              </div>
+               <div class="form-group">
+                <span id = "target" class=" form-custom primary  px-4 py-3 text-center"></span>
               </div>
             </form>
           </div>
@@ -245,9 +249,9 @@
     </footer>
 
     
-    
 
     <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/sendMail.js"></script>
     <script src="js/vendor/popper.min.js"></script>
     <script src="js/vendor/bootstrap.min.js"></script>
     
@@ -267,15 +271,10 @@
 
 
     <!-- mail send hint -->
-<!--     <form action="https://formspree.io/youremail">
-      <input type="email" name="_replyto">
-      <textarea name="body"></textarea>
-      <input type="submit" value="send">
-https://www.linkedin.com/in/mochene-freddy-lebogo-637a591b7
-    </form>
- -->
+<!-- modify this form HTML and place wherever you want your form -->
 
 
+<!-- https://www.linkedin.com/in/mochene-freddy-lebogo-637a591b7 -->
 
   </body>
 </html>
