@@ -27,7 +27,7 @@ $(document).ready(function() {
 
        
 
-        return $.ajax({
+         $.ajax({
             url: 'https://portfolioapii.herokuapp.com/send',
             type: 'post',
             dataType: 'json',
@@ -45,6 +45,6 @@ $(document).ready(function() {
             }
             
         });
-	alert("mail sent")
+	
 } 
 })
