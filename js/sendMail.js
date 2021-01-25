@@ -28,7 +28,7 @@ $(document).ready(function() {
         $('#target').html('sending..');
 
         return $.ajax({
-            url: 'http://localhost:3000/send',
+            url: 'https://portfolioapii.herokuapp.com/send',
             type: 'post',
             dataType: 'json',
             contentType: 'application/json',
