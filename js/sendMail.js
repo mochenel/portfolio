@@ -1,29 +1,50 @@
 
 $(document).ready(function() { 
-// 	$('#send').click(sendMail);
-// 	function sendMail() { 
+	$('#send').click(sendMail);
+	function sendMail() { 
 
-//         let person = {
-//             name: $("#name").val(),
-//             email:$("#email").val(),
-//             tel:$("#tel").val(),
-//             message:$("#message").val()
-//         }
+		let senderName = $("#name").val().trim();
+		let senderEmail = $("#email").val().trim();
+		let senderTel = $("#tel").val().trim();
+		let senderMessage = $("#message").val().trim();
 
-//         $('#target').html('sending..');
+		// required fields check
 
-//         return $.ajax({
-//             url: 'http://localhost:3000/send',
-//             type: 'post',
-//             dataType: 'json',
-//             async: false,
-//             contentType: 'application/json',
-//             success: function (data) {
-//             	console.log("****** "+data)
-//                 $('#target').html(data);
-//             },
-//             data: JSON.stringify(person)
-//         });
+		if(senderName == "" || senderEmail == "" || senderTel == "" || senderMessage == "" ){
+			alert("empty")
+			return;
+		}
+
+		
+		
+
+        let person = {
+            name: senderName,
+            email:senderEmail,
+            tel:senderTel,
+            message:senderMessage
+        }
+
+        $('#target').html('sending..');
+
+        return $.ajax({
+            url: 'http://localhost:3000/send',
+            type: 'post',
+            dataType: 'json',
+            contentType: 'application/json',
+            data: JSON.stringify(person),
+            success: function (response) {
+
+            	if(response == "ok"){
+            		$('#target').html('mail sent ');
+            		alert("mail sent")
+            	}
+            	else{
+            		alert("mail not sent")
+            	}
+            }
+            
+        });
 	
-// } 
+} 
 })

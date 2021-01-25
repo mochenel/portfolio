@@ -178,19 +178,19 @@
           </div>
           
           <div class="col-md-7 mb-5 mb-md-0">
-            <form class="site-form" >
+            <form class="site-form was-validated">
               <h3 class="mb-5">Get In Touch</h3>
               <div class="form-group">
-                <input type="text" class="form-control px-3 py-4" id="name" name="name" placeholder="Your Name">
+                <input type="text" class="form-control px-3 py-4" id="name" name="name" placeholder="Your Name" required>
               </div>
               <div class="form-group">
-                <input type="email" class="form-control px-3 py-4" id="email" name="email" placeholder="Your Email">
+                <input type="email" class="form-control px-3 py-4" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" name="email" placeholder="Your Email" title="Correct email required" required>
               </div>
               <div class="form-group">
-                <input type="tel" class="form-control px-3 py-4" id="tel" name="tel" placeholder="Your Phone"  title="incorrect tel format">
+                <input type="tel" class="form-control px-3 py-4" id="tel" name="tel" pattern="[0-9]{10}" placeholder="Your Phone"  title="Correct phone number required" required>
               </div>
               <div class="form-group mb-5">
-                <textarea class="form-control px-3 py-4"cols="30" rows="10" id="message" name="message" placeholder="Write a Message"></textarea>
+                <textarea class="form-control px-3 py-4"cols="30" rows="10" id="message" name="message" placeholder="Write a Message" required></textarea>
               </div>
               <div class="form-group">
                 <button type="button" id="send" class="btn btn-primary  px-4 py-3" >Send Message</button>
