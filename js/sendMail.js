@@ -25,7 +25,7 @@ $(document).ready(function() {
             message:senderMessage
         }
 
-        $('#target').html('sending..');
+       
 
         return $.ajax({
             url: 'https://portfolioapii.herokuapp.com/send',
@@ -37,7 +37,7 @@ $(document).ready(function() {
 
             	if(response == "ok"){
             		$('#target').html('mail sent ');
-            		alert("mail sent")
+            		
             	}
             	else{
             		alert("mail not sent")
@@ -45,6 +45,6 @@ $(document).ready(function() {
             }
             
         });
-	
+	alert("mail sent")
 } 
 })
