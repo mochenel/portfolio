@@ -26,7 +26,7 @@ $(document).ready(function() {
         }
 
        
-
+	alert("mail not sent")
          $.ajax({
             url: 'https://portfolioapii.herokuapp.com/send',
             type: 'post',
@@ -36,10 +36,12 @@ $(document).ready(function() {
             success: function (response) {
 
             	if(response == "ok"){
+			console.log("***",response)
             		$('#target').html('mail sent ');
             		
             	}
             	else{
+			console.log("not***",response)
             		alert("mail not sent")
             	}
             }
