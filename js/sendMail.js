@@ -34,13 +34,10 @@ $(document).ready(function() {
             contentType: 'application/json',
             data: JSON.stringify(person),
             success: function (response) {
-
-            		alert("mail sent");
-            	
             	
             }
             
         });
-	
+	alert("mail sent");
 } 
 })
