@@ -25,7 +25,10 @@ $(document).ready(function() {
             message:senderMessage
         }
 
-        $('#target').html('sending..');
+        $('#inner').attr('disabled',true);
+        $('#outer').css("display","");
+        $('#outer').attr("class","form-group spinner-border");
+        $('#inner').attr("class","form-control sr-only");
 
         return $.ajax({
             url: 'https://portfolioapii.herokuapp.com/send',
@@ -36,12 +39,17 @@ $(document).ready(function() {
             success: function (response) {
 
             	if(response.response == "ok"){
-            		$('#target').html('mail sent ');
-            		alert("mail sent")
+            		
+                     $('#outer').attr("class","form-group");
+                     $('#inner').attr("class","form-control text-success");
+                     $('#inner').html('Email was sent successfully');
+                     $('#inner').attr('disabled',false);
             	}
             	else{
-			$('#target').html('mail not sent. ');
-            		alert("mail not sent. \n"+response.response);
+		     $('#outer').attr("class","form-group");
+                     $('#inner').attr("class","form-control text-danger");
+                     $('#inner').html('An Error occured, please try again later');
+            	     $('#inner').attr('disabled',false); 
             	}
             }
             
