@@ -40,6 +40,7 @@ $(document).ready(function() {
             		alert("mail sent")
             	}
             	else{
+			$('#target').html('mail not sent ');
             		alert("mail not sent")
             	}
             }
