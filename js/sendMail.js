@@ -9,9 +9,10 @@ $(document).ready(function() {
 		let senderMessage = $("#message").val().trim();
 
 		// required fields check
-
-		if(senderName == "" || senderEmail == "" || senderTel == "" || senderMessage == "" ){
-			alert("empty")
+		let pattern1 = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/; 
+		let pattern2 = [0-9]{10};
+		if(senderName == "" || senderEmail == "" || senderTel == "" || senderMessage == "" || !pattern1.test(senderEmail) || !pattern2.test(senderTel)){
+			
 			return;
 		}
 
