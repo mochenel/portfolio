@@ -10,7 +10,7 @@ $(document).ready(function() {
 
 		// required fields check
 		let pattern1 = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/; 
-		let pattern2 = [0-9]{10};
+		let pattern2 = /^\d{10}$/;
 		if(senderName == "" || senderEmail == "" || senderTel == "" || senderMessage == "" || !pattern1.test(senderEmail) || !pattern2.test(senderTel)){
 			
 			return;
