@@ -25,19 +25,26 @@ $(document).ready(function() {
             message:senderMessage
         }
 
-       
-	
-         $.ajax({
+        $('#target').html('sending..');
+
+        return $.ajax({
             url: 'https://portfolioapii.herokuapp.com/send',
             type: 'post',
             dataType: 'json',
             contentType: 'application/json',
             data: JSON.stringify(person),
             success: function (response) {
-            	
+
+            	if(response == "ok"){
+            		$('#target').html('mail sent ');
+            		alert("mail sent")
+            	}
+            	else{
+            		alert("mail not sent")
+            	}
             }
             
         });
-	alert("mail sent");
+	
 } 
 })
