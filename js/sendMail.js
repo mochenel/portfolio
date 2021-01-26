@@ -35,7 +35,7 @@ $(document).ready(function() {
             data: JSON.stringify(person),
             success: function (response) {
 
-            	if(response == "ok"){
+            	if(response.response == "ok"){
             		$('#target').html('mail sent ');
             		alert("mail sent")
             	}
