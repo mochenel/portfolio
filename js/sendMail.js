@@ -45,6 +45,10 @@ $(document).ready(function() {
                      $('#inner').attr("class","form-control text-success");
                      $('#inner').html('Email was sent successfully');
                      $('#inner').attr('disabled',false);
+		     $("#name").val('');
+		     $("#email").val('');
+		     $("#tel").val('');
+		     $("#message").val('');
             	}
             	else{
 		     $('#outer').attr("class","form-group");
